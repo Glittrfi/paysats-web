@@ -121,14 +121,6 @@ export function WaitlistForm() {
           Join Waitlist
         </button>
       </form>
-      <a
-        href="https://getlaunchlist.com/?ref=arka"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-6 block text-center text-xs text-gray-400 hover:text-gray-600 transition"
-      >
-        Waitlist powered by LaunchList
-      </a>
       <Script
         src="https://getlaunchlist.com/js/widget-diy.js"
         strategy="lazyOnload"

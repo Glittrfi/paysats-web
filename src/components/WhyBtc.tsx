@@ -143,8 +143,7 @@ export function WhyBtc() {
             </div>
             <p className="mt-3 text-xs text-gray-500">
               Historical data is approximate. Past performance does not
-              guarantee future results. Crypto investments are subject to market
-              risks.
+              guarantee future results.
             </p>
           </div>
         </div>

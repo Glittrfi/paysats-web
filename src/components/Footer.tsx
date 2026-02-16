@@ -28,8 +28,7 @@ export function Footer() {
           </nav>
         </div>
         <p className="mt-8 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Arka. Crypto investments are subject to
-          market risks. By using Arka you agree to our Terms of Service and
+          © {new Date().getFullYear()} Arka. By using Arka you agree to our Terms of Service and
           Privacy Policy.
         </p>
       </div>
