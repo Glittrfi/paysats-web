@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 
-const INDODAX_URL = "https://indodax.com/api/ticker/btcidr";
+const COINGECKO_URL =
+  "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=idr&include_24hr_change=true";
 
 interface PriceData {
-  last: number;
-  high: number;
-  low: number;
+  price: number;
+  change24h: number;
 }
 
 export function BtcTicker() {
@@ -18,15 +18,13 @@ export function BtcTicker() {
 
     async function fetchPrice() {
       try {
-        const res = await fetch(INDODAX_URL);
+        const res = await fetch(COINGECKO_URL);
         if (!res.ok) return;
         const json = await res.json();
         if (cancelled) return;
-        const t = json.ticker;
         setData({
-          last: Number(t.last),
-          high: Number(t.high),
-          low: Number(t.low),
+          price: json.bitcoin.idr,
+          change24h: json.bitcoin.idr_24h_change,
         });
       } catch {
         /* silent — ticker is non-critical */
@@ -34,7 +32,7 @@ export function BtcTicker() {
     }
 
     fetchPrice();
-    const interval = setInterval(fetchPrice, 30_000);
+    const interval = setInterval(fetchPrice, 60_000);
     return () => {
       cancelled = true;
       clearInterval(interval);
@@ -47,14 +45,12 @@ export function BtcTicker() {
     style: "currency",
     currency: "IDR",
     maximumFractionDigits: 0,
-  }).format(data.last);
+  }).format(data.price);
 
-  const billions = data.last / 1_000_000_000;
+  const billions = data.price / 1_000_000_000;
   const short = `~${billions.toFixed(2)}B IDR`;
 
-  const mid = (data.high + data.low) / 2;
-  const changeFromMid = ((data.last - mid) / mid) * 100;
-  const isUp = changeFromMid >= 0;
+  const isUp = data.change24h >= 0;
 
   return (
     <div
@@ -64,7 +60,7 @@ export function BtcTicker() {
       <span className="text-orange-500">₿</span>
       <span className="text-gray-700">{short}</span>
       <span className={isUp ? "text-green-600" : "text-red-500"}>
-        {isUp ? "↑" : "↓"} {Math.abs(changeFromMid).toFixed(1)}%
+        {isUp ? "↑" : "↓"} {Math.abs(data.change24h).toFixed(1)}%
       </span>
     </div>
   );
