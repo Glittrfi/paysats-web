@@ -7,3 +7,126 @@
     scroll-behavior: smooth;
   }
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Chingari-inspired phone mockup */
+@keyframes phone-float {
+  0%, 100% {
+    transform: perspective(1000px) rotateY(-8deg) rotateX(2deg) translateY(0px);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(-8deg) rotateX(2deg) translateY(-14px);
+  }
+}
+
+@keyframes phone-float-reverse {
+  0%, 100% {
+    transform: perspective(1000px) rotateY(8deg) rotateX(-2deg) translateY(0px);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(8deg) rotateX(-2deg) translateY(-10px);
+  }
+}
+
+@keyframes phone-shadow {
+  0%, 100% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scaleX(0.92) scaleY(0.92);
+    opacity: 0.08;
+  }
+}
+
+@keyframes screen-glow {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.phone-mockup {
+  animation: phone-float 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.phone-mockup-reverse {
+  animation: phone-float-reverse 7s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.phone-shadow {
+  animation: phone-shadow 6s ease-in-out infinite;
+}
+
+.phone-screen-glow {
+  animation: screen-glow 4s ease-in-out infinite;
+}
+
+/* Initial roll-in entrance (Chingari-style) */
+@keyframes phone-roll-in {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-35deg) rotateZ(8deg) translateX(120px) translateY(40px) scale(0.85);
+  }
+  60% {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(-5deg) rotateZ(-1deg) translateX(-10px) translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(-8deg) rotateX(2deg) translateX(0) translateY(0) scale(1);
+  }
+}
+
+.phone-roll-in {
+  animation: phone-roll-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.phone-roll-in-delay {
+  opacity: 0;
+}
+
+/* After roll-in completes, chain into the float */
+.phone-roll-in.phone-float-after {
+  animation:
+    phone-roll-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    phone-float 6s ease-in-out 1.2s infinite;
+  transform-style: preserve-3d;
+}
