@@ -43,20 +43,26 @@ export function BtcTicker() {
 
   if (!data) return null;
 
-  const formatted = new Intl.NumberFormat("id-ID", {
+  const full = new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
     maximumFractionDigits: 0,
   }).format(data.last);
+
+  const billions = data.last / 1_000_000_000;
+  const short = `~${billions.toFixed(2)}B IDR`;
 
   const mid = (data.high + data.low) / 2;
   const changeFromMid = ((data.last - mid) / mid) * 100;
   const isUp = changeFromMid >= 0;
 
   return (
-    <div className="hidden items-center gap-1.5 rounded-full border border-gray-200 px-3 py-1.5 text-xs font-medium sm:flex">
+    <div
+      className="hidden items-center gap-1.5 rounded-full border border-gray-200 px-3 py-1.5 text-xs font-medium sm:flex cursor-default"
+      title={full}
+    >
       <span className="text-orange-500">₿</span>
-      <span className="text-gray-700">{formatted}</span>
+      <span className="text-gray-700">{short}</span>
       <span className={isUp ? "text-green-600" : "text-red-500"}>
         {isUp ? "↑" : "↓"} {Math.abs(changeFromMid).toFixed(1)}%
       </span>
