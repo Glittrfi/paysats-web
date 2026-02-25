@@ -12,8 +12,8 @@ const translations = {
   "hero.title1": { id: "Nabung di ", en: "Save into " },
   "hero.titleAccent": { id: "BTC Pockets", en: "BTC Pockets" },
   "hero.subtitle": {
-    id: "Buat target tabungan dan investasi otomatis ke Bitcoin lewat akun virtual Tokocrypto. DCA Rupiah ke BTC untuk setiap tujuan—mulai dari Rp 100.000.",
-    en: "Create savings goals and auto-invest into Bitcoin via Tokocrypto virtual accounts. DCA your IDR into BTC for each goal—start with as little as Rp 100.000.",
+    id: "Buat target tabungan dan investasi otomatis ke Bitcoin. DCA Rupiah ke BTC untuk setiap tujuan—mulai dari Rp 100.000.",
+    en: "Create savings goals and auto-invest into Bitcoin. DCA your IDR into BTC for each goal—start with as little as Rp 100.000.",
   },
   "hero.earlyAccess": { id: "Akses lebih awal", en: "Get early access" },
   "hero.watchDemo": { id: "Tonton demo 30 detik", en: "Watch 30s demo" },
@@ -21,7 +21,7 @@ const translations = {
   // Social proof badges
   "social.badge1": { id: "Nabung di BTC Pockets", en: "Save into BTC Pockets" },
   "social.badge2": { id: "Auto DCA IDR → BTC", en: "Auto DCA IDR → BTC" },
-  "social.badge3": { id: "Akun virtual Tokocrypto", en: "Tokocrypto virtual accounts" },
+  "social.badge3": { id: "Aman & terverifikasi KYC", en: "Secure & KYC-verified" },
   "social.badge4": { id: "Mulai dari Rp 100.000", en: "Start from Rp 100.000" },
 
   // How it works
@@ -37,8 +37,8 @@ const translations = {
   },
   "how.step2.title": { id: "Buat BTC pocket kamu", en: "Create your BTC pockets" },
   "how.step2.desc": {
-    id: "Siapkan akun Arka dan buat pocket untuk setiap tujuan. Beri nama, tentukan target, dan hubungkan ke Tokocrypto.",
-    en: "Set up your Arka account and create pockets for each goal. Name them, set targets, and link to Tokocrypto.",
+    id: "Siapkan akun Arka dan buat pocket untuk setiap tujuan. Beri nama, tentukan target, dan mulai nabung.",
+    en: "Set up your Arka account and create pockets for each goal. Name them, set targets, and start saving.",
   },
   "how.step3.title": { id: "Auto DCA & pantau pertumbuhan", en: "Auto DCA and track growth" },
   "how.step3.desc": {
@@ -96,10 +96,10 @@ const translations = {
     id: "Atur pembelian berulang dan biarkan Arka investasi otomatis IDR ke Bitcoin. Kurangi risiko volatilitas dengan dollar-cost averaging.",
     en: "Set recurring buys and let Arka auto-invest your IDR into Bitcoin. Smooth out volatility with dollar-cost averaging.",
   },
-  "whyArka.benefit3.title": { id: "Integrasi Tokocrypto", en: "Tokocrypto integration" },
+  "whyArka.benefit3.title": { id: "Aman & Terverifikasi", en: "Secure & Verified" },
   "whyArka.benefit3.desc": {
-    id: "Akun virtual aman via Tokocrypto. Terverifikasi KYC, infrastruktur terpercaya untuk tabungan BTC kamu.",
-    en: "Secure virtual accounts via Tokocrypto. KYC-verified, trusted infrastructure for your BTC savings.",
+    id: "Infrastruktur terverifikasi KYC dan terpercaya untuk tabungan BTC kamu. Aset kamu aman dan terlindungi.",
+    en: "KYC-verified, trusted infrastructure for your BTC savings. Your assets are safe and protected.",
   },
   "whyArka.benefit4.title": { id: "Semua tabungan dalam satu tempat", en: "See all your savings in one place" },
   "whyArka.benefit4.desc": {
@@ -185,8 +185,8 @@ const translations = {
   // Metadata
   "meta.title": { id: "Arka – Nabung di BTC Pockets", en: "Arka – Save into BTC Pockets" },
   "meta.description": {
-    id: "Arka memungkinkan kamu DCA Rupiah ke Bitcoin untuk setiap target tabungan. Investasi otomatis via Tokocrypto. Mulai dari Rp 100.000. Dibangun untuk penabung Indonesia.",
-    en: "Arka lets you DCA your IDR into Bitcoin for every savings goal. Auto-invest via Tokocrypto. Start from Rp 100.000. Built for Indonesian savers.",
+    id: "Arka memungkinkan kamu DCA Rupiah ke Bitcoin untuk setiap target tabungan. Investasi otomatis. Mulai dari Rp 100.000. Dibangun untuk penabung Indonesia.",
+    en: "Arka lets you DCA your IDR into Bitcoin for every savings goal. Auto-invest with ease. Start from Rp 100.000. Built for Indonesian savers.",
   },
 } as const;
 

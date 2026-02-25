@@ -15,7 +15,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Arka – Nabung di BTC Pockets",
   description:
-    "Arka memungkinkan kamu DCA Rupiah ke Bitcoin untuk setiap target tabungan. Investasi otomatis via Tokocrypto. Mulai dari Rp 100.000. Dibangun untuk penabung Indonesia.",
+    "Arka memungkinkan kamu DCA Rupiah ke Bitcoin untuk setiap target tabungan. Investasi otomatis. Mulai dari Rp 100.000. Dibangun untuk penabung Indonesia.",
 };
 
 export default function RootLayout({

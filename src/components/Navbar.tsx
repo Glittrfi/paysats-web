@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
+import { BtcTicker } from "./BtcTicker";
 
 export function Navbar() {
   const { locale, toggleLocale, t } = useI18n();
@@ -8,9 +9,12 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#" className="font-display text-xl font-bold text-gray-900">
-          Arka
-        </a>
+        <div className="flex items-center gap-4">
+          <a href="#" className="font-display text-xl font-bold text-gray-900">
+            Arka
+          </a>
+          <BtcTicker />
+        </div>
         <div className="flex items-center gap-3">
           <button
             type="button"
