@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface VideoWithPlaceholderProps {
   src: string;
@@ -22,6 +22,14 @@ export function VideoWithPlaceholder({
   const [ready, setReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.playbackRate = 2;
+      if (v.readyState >= 2 && !ready) setReady(true);
+    }
+  }, [ready]);
+
   return (
     <div className={`relative ${className}`}>
       {!ready && (
@@ -41,7 +49,10 @@ export function VideoWithPlaceholder({
         playsInline={playsInline}
         preload="auto"
         src={src}
-        onLoadedData={() => setReady(true)}
+        onLoadedData={() => {
+          if (videoRef.current) videoRef.current.playbackRate = 2;
+          setReady(true);
+        }}
       >
         <track kind="captions" />
       </video>
