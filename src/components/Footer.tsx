@@ -1,11 +1,17 @@
-const links = [
-  { href: "#", label: "Privacy" },
-  { href: "#", label: "Terms" },
-  { href: "https://x.com/arka_app", label: "X / Twitter", external: true },
-  { href: "mailto:hello@arka.app", label: "Email", external: true },
-];
+"use client";
+
+import { useI18n } from "@/lib/i18n";
 
 export function Footer() {
+  const { t } = useI18n();
+
+  const links = [
+    { href: "#", label: t("footer.privacy") },
+    { href: "#", label: t("footer.terms") },
+    { href: "https://x.com/arka_app", label: "X / Twitter", external: true },
+    { href: "mailto:hello@arka.app", label: "Email", external: true },
+  ];
+
   return (
     <footer className="border-t border-gray-200 bg-gray-50 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -28,8 +34,7 @@ export function Footer() {
           </nav>
         </div>
         <p className="mt-8 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Arka. By using Arka you agree to our Terms of Service and
-          Privacy Policy.
+          © {new Date().getFullYear()} Arka. {t("footer.copyright")}
         </p>
       </div>
     </footer>

@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ARKA_DEMO_VIDEO } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n";
 
 interface VideoModalProps {
   isOpen: boolean;
@@ -9,6 +10,8 @@ interface VideoModalProps {
 }
 
 export function VideoModal({ isOpen, onClose }: VideoModalProps) {
+  const { t } = useI18n();
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -79,7 +82,7 @@ export function VideoModal({ isOpen, onClose }: VideoModalProps) {
           )}
         </div>
         <p className="mt-3 text-center text-sm text-white">
-          See how Arka DCA and BTC pockets work in under 30 seconds.
+          {t("modal.caption")}
         </p>
       </div>
     </div>

@@ -9,6 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { useI18n } from "@/lib/i18n";
 import { AnimateIn } from "./AnimateIn";
 
 const BTC_HISTORY = [
@@ -31,6 +32,8 @@ const formatPrice = (value: number) => {
 };
 
 export function WhyBtc() {
+  const { t } = useI18n();
+
   return (
     <section className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -38,34 +41,31 @@ export function WhyBtc() {
           <AnimateIn animation="fade-right">
             <div>
               <h2 className="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Why Bitcoin for your savings?
+                {t("whyBtc.title")}
               </h2>
               <p className="mt-4 text-lg text-gray-600">
-                Bitcoin has shown strong long-term appreciation as a store of
-                value. Dollar-cost averaging (DCA) smooths out volatility—you
-                buy a fixed amount regularly instead of trying to time the market.
+                {t("whyBtc.subtitle")}
               </p>
               <ul className="mt-6 space-y-3">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-arka-primary" />
                   <span className="text-gray-600">
-                    <strong className="text-gray-900">Compound growth.</strong>{" "}
-                    Historical data suggests BTC has outperformed many traditional
-                    assets over extended periods.
+                    <strong className="text-gray-900">{t("whyBtc.point1.title")}</strong>{" "}
+                    {t("whyBtc.point1.desc")}
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-arka-primary" />
                   <span className="text-gray-600">
-                    <strong className="text-gray-900">DCA reduces risk.</strong>{" "}
-                    Spreading buys over time avoids the stress of lump-sum timing.
+                    <strong className="text-gray-900">{t("whyBtc.point2.title")}</strong>{" "}
+                    {t("whyBtc.point2.desc")}
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-arka-primary" />
                   <span className="text-gray-600">
-                    <strong className="text-gray-900">Start small.</strong> With Arka,
-                    you can DCA into BTC from as little as Rp 100.000 per pocket.
+                    <strong className="text-gray-900">{t("whyBtc.point3.title")}</strong>{" "}
+                    {t("whyBtc.point3.desc")}
                   </span>
                 </li>
               </ul>
@@ -74,7 +74,7 @@ export function WhyBtc() {
           <AnimateIn animation="fade-left" delay={200}>
             <div className="rounded-2xl border border-gray-200 bg-gray-50/50 p-6 shadow-sm">
               <p className="mb-4 text-sm font-medium text-gray-600">
-                BTC price history (USD)
+                {t("whyBtc.chartLabel")}
               </p>
               <div className="h-[240px] min-h-[200px] w-full">
                 <ResponsiveContainer width="100%" height="100%" minHeight={200}>
@@ -90,16 +90,8 @@ export function WhyBtc() {
                         x2="0"
                         y2="1"
                       >
-                        <stop
-                          offset="0%"
-                          stopColor="#F07E63"
-                          stopOpacity={0.3}
-                        />
-                        <stop
-                          offset="100%"
-                          stopColor="#F07E63"
-                          stopOpacity={0}
-                        />
+                        <stop offset="0%" stopColor="#F07E63" stopOpacity={0.3} />
+                        <stop offset="100%" stopColor="#F07E63" stopOpacity={0} />
                       </linearGradient>
                     </defs>
                     <CartesianGrid
@@ -126,7 +118,7 @@ export function WhyBtc() {
                       formatter={(value: number | undefined) =>
                         value != null ? [formatPrice(value), "BTC"] : ""
                       }
-                      labelFormatter={(label) => `Year: ${label}`}
+                      labelFormatter={(label) => `${t("whyBtc.chartYear")}: ${label}`}
                       contentStyle={{
                         borderRadius: "12px",
                         border: "1px solid #E5E7EB",
@@ -145,8 +137,7 @@ export function WhyBtc() {
                 </ResponsiveContainer>
               </div>
               <p className="mt-3 text-xs text-gray-500">
-                Historical data is approximate. Past performance does not
-                guarantee future results.
+                {t("whyBtc.disclaimer")}
               </p>
             </div>
           </AnimateIn>

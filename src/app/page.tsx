@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { I18nProvider, useI18n } from "@/lib/i18n";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { SocialProof } from "@/components/SocialProof";
@@ -13,8 +14,9 @@ import { Footer } from "@/components/Footer";
 import { VideoModal } from "@/components/VideoModal";
 import { AnimateIn } from "@/components/AnimateIn";
 
-export default function HomePage() {
+function PageContent() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const { t } = useI18n();
 
   return (
     <>
@@ -34,12 +36,10 @@ export default function HomePage() {
             <AnimateIn animation="fade-up">
               <div className="mx-auto max-w-2xl text-center">
                 <h2 className="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Join the waitlist
+                  {t("waitlist.title")}
                 </h2>
                 <p className="mt-4 text-lg text-gray-600">
-                  Be first to know when Arka opens. Get priority access to BTC
-                  pockets, influence the product with early feedback, and exclusive
-                  launch perks.
+                  {t("waitlist.subtitle")}
                 </p>
               </div>
             </AnimateIn>
@@ -57,5 +57,13 @@ export default function HomePage() {
         onClose={() => setVideoModalOpen(false)}
       />
     </>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <I18nProvider>
+      <PageContent />
+    </I18nProvider>
   );
 }

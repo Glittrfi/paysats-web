@@ -13,9 +13,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Arka – Save into BTC Pockets",
+  title: "Arka – Nabung di BTC Pockets",
   description:
-    "Arka lets you DCA your IDR into Bitcoin for every savings goal. Auto-invest via Tokocrypto. Start from Rp 100.000. Built for Indonesian savers.",
+    "Arka memungkinkan kamu DCA Rupiah ke Bitcoin untuk setiap target tabungan. Investasi otomatis via Tokocrypto. Mulai dari Rp 100.000. Dibangun untuk penabung Indonesia.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${outfit.variable}`}>
+    <html lang="id" className={`${dmSans.variable} ${outfit.variable}`}>
       <body className="antialiased font-sans bg-white text-gray-900">
         {children}
       </body>

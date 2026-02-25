@@ -2,62 +2,44 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import { useI18n } from "@/lib/i18n";
 import { AnimateIn } from "./AnimateIn";
 
-const goals = [
+const goalKeys = [
   {
-    title: "Dream Home",
-    label: "Housing",
+    titleKey: "whyArka.goal1.title",
+    labelKey: "whyArka.goal1.label",
     src: "/images/goal-housing.png",
     alt: "Young Indonesian couple in front of their dream tropical home at golden hour",
   },
   {
-    title: "Perfect Wedding",
-    label: "Wedding",
+    titleKey: "whyArka.goal2.title",
+    labelKey: "whyArka.goal2.label",
     src: "/images/goal-wedding.png",
     alt: "Traditional Javanese wedding ceremony with flowers and golden lighting",
   },
   {
-    title: "Peaceful Retirement",
-    label: "Retirement",
+    titleKey: "whyArka.goal3.title",
+    labelKey: "whyArka.goal3.label",
     src: "/images/goal-retirement.png",
     alt: "Retired Indonesian couple enjoying coffee overlooking Bali rice terraces at sunset",
   },
-];
+] as const;
 
-const benefits = [
-  {
-    title: "Multiple BTC Pockets",
-    description:
-      "Housing, wedding, retirement, travel—create a dedicated pocket for each goal and DCA IDR into BTC per pocket.",
-    icon: "🎯",
-  },
-  {
-    title: "Auto DCA",
-    description:
-      "Set recurring buys and let Arka auto-invest your IDR into Bitcoin. Smooth out volatility with dollar-cost averaging.",
-    icon: "📈",
-  },
-  {
-    title: "Tokocrypto integration",
-    description:
-      "Secure virtual accounts via Tokocrypto. KYC-verified, trusted infrastructure for your BTC savings.",
-    icon: "🛡️",
-  },
-  {
-    title: "See all your savings in one place",
-    description:
-      "One dashboard, all your BTC pockets, clear progress on every goal. Start from as little as Rp 100.000.",
-    icon: "📊",
-  },
-];
+const benefitKeys = [
+  { title: "whyArka.benefit1.title", desc: "whyArka.benefit1.desc", icon: "🎯" },
+  { title: "whyArka.benefit2.title", desc: "whyArka.benefit2.desc", icon: "📈" },
+  { title: "whyArka.benefit3.title", desc: "whyArka.benefit3.desc", icon: "🛡️" },
+  { title: "whyArka.benefit4.title", desc: "whyArka.benefit4.desc", icon: "📊" },
+] as const;
 
 function GoalCarousel() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const { t } = useI18n();
 
   const next = useCallback(
-    () => setActive((prev) => (prev + 1) % goals.length),
+    () => setActive((prev) => (prev + 1) % goalKeys.length),
     [],
   );
 
@@ -73,15 +55,14 @@ function GoalCarousel() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Slides */}
       <div className="relative aspect-[16/9] overflow-hidden rounded-3xl shadow-2xl">
-        {goals.map((goal, i) => (
+        {goalKeys.map((goal, i) => (
           <div
-            key={goal.title}
+            key={goal.titleKey}
             className={`absolute inset-0 transition-all duration-700 ease-in-out ${
               i === active
                 ? "opacity-100 scale-100 translate-x-0"
-                : i === (active + 1) % goals.length
+                : i === (active + 1) % goalKeys.length
                   ? "opacity-0 scale-105 translate-x-full"
                   : "opacity-0 scale-95 -translate-x-full"
             }`}
@@ -102,23 +83,22 @@ function GoalCarousel() {
               }`}
             >
               <span className="inline-block rounded-full bg-arka-primary/90 px-4 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
-                {goal.label}
+                {t(goal.labelKey)}
               </span>
               <h3 className="mt-3 font-display text-2xl font-bold text-white drop-shadow-lg sm:text-3xl">
-                {goal.title}
+                {t(goal.titleKey)}
               </h3>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Dots + progress */}
       <div className="mt-6 flex items-center justify-center gap-3">
-        {goals.map((goal, i) => (
+        {goalKeys.map((goal, i) => (
           <button
-            key={goal.title}
+            key={goal.titleKey}
             type="button"
-            aria-label={`Go to ${goal.title}`}
+            aria-label={`Go to ${t(goal.titleKey)}`}
             onClick={() => setActive(i)}
             className="group relative h-2 overflow-hidden rounded-full transition-all duration-300"
             style={{ width: i === active ? 40 : 8 }}
@@ -143,38 +123,38 @@ function GoalCarousel() {
 }
 
 export function WhyArka() {
+  const { t } = useI18n();
+
   return (
     <section className="bg-gradient-to-b from-arka-surface/50 to-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimateIn animation="fade-up">
           <h2 className="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Why Arka
+            {t("whyArka.title")}
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-gray-600">
-            DCA your IDR into Bitcoin for every savings goal. Built for Indonesian
-            savers who want a modern, app-first approach.
+            {t("whyArka.subtitle")}
           </p>
         </AnimateIn>
 
         <AnimateIn animation="scale" delay={200}>
           <GoalCarousel />
           <p className="mt-4 text-center text-sm text-gray-500">
-            Create a BTC pocket for every life goal—start saving today.
+            {t("whyArka.carousel.cta")}
           </p>
         </AnimateIn>
 
-        {/* Benefit cards */}
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {benefits.map((benefit, i) => (
+          {benefitKeys.map((benefit, i) => (
             <AnimateIn key={benefit.title} animation="fade-up" delay={i * 100}>
               <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-arka-primary/30 hover:shadow-lg hover:-translate-y-1">
                 <span className="text-3xl" role="img" aria-hidden>
                   {benefit.icon}
                 </span>
                 <h3 className="mt-4 font-display text-lg font-semibold text-gray-900">
-                  {benefit.title}
+                  {t(benefit.title)}
                 </h3>
-                <p className="mt-2 text-sm text-gray-600">{benefit.description}</p>
+                <p className="mt-2 text-sm text-gray-600">{t(benefit.desc)}</p>
               </div>
             </AnimateIn>
           ))}

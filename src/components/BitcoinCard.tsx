@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { useI18n } from "@/lib/i18n";
 import { AnimateIn } from "./AnimateIn";
 
 export function BitcoinCard() {
+  const { t } = useI18n();
+
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-20 sm:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -23,14 +28,13 @@ export function BitcoinCard() {
           <div className="order-1 lg:order-2">
             <AnimateIn animation="fade-up">
               <span className="inline-block rounded-full bg-arka-primary/10 px-4 py-1.5 text-sm font-semibold text-arka-primary-dark">
-                Coming soon
+                {t("card.soon")}
               </span>
               <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                The Arka Bitcoin Card
+                {t("card.title")}
               </h2>
               <p className="mt-4 text-xl text-gray-600">
-                Indonesia&apos;s first Bitcoin-powered debit card. Spend your BTC
-                savings anywhere Visa is accepted.
+                {t("card.subtitle")}
               </p>
             </AnimateIn>
             <AnimateIn animation="fade-up" delay={200}>
@@ -40,11 +44,8 @@ export function BitcoinCard() {
                     ₿
                   </span>
                   <span className="text-gray-600">
-                    <strong className="text-gray-900">
-                      Pay with Bitcoin, settle in Rupiah.
-                    </strong>{" "}
-                    Seamless conversion at the point of sale—no manual selling
-                    required.
+                    <strong className="text-gray-900">{t("card.feat1.title")}</strong>{" "}
+                    {t("card.feat1.desc")}
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -52,11 +53,8 @@ export function BitcoinCard() {
                     ₿
                   </span>
                   <span className="text-gray-600">
-                    <strong className="text-gray-900">
-                      Linked to your BTC pockets.
-                    </strong>{" "}
-                    Choose which pocket to spend from—travel, daily expenses, or
-                    your main balance.
+                    <strong className="text-gray-900">{t("card.feat2.title")}</strong>{" "}
+                    {t("card.feat2.desc")}
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -64,11 +62,8 @@ export function BitcoinCard() {
                     ₿
                   </span>
                   <span className="text-gray-600">
-                    <strong className="text-gray-900">
-                      Real-time notifications.
-                    </strong>{" "}
-                    Instant alerts for every transaction, so you always know
-                    what&apos;s happening with your money.
+                    <strong className="text-gray-900">{t("card.feat3.title")}</strong>{" "}
+                    {t("card.feat3.desc")}
                   </span>
                 </li>
               </ul>
@@ -78,7 +73,7 @@ export function BitcoinCard() {
                 href="#waitlist"
                 className="mt-10 inline-flex rounded-full bg-arka-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-arka-primary/25 transition-all hover:bg-arka-primary-dark hover:shadow-xl hover:shadow-arka-primary/30 focus:outline-none focus:ring-2 focus:ring-arka-primary focus:ring-offset-2"
               >
-                Get early access to the card
+                {t("card.cta")}
               </a>
             </AnimateIn>
           </div>

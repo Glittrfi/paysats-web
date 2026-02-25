@@ -1,6 +1,7 @@
 "use client";
 
 import { ARKA_DEMO_VIDEO } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n";
 import { useEffect, useState } from "react";
 import { PhoneMockup } from "./PhoneMockup";
 import { VideoWithPlaceholder } from "./VideoWithPlaceholder";
@@ -11,6 +12,7 @@ interface HeroProps {
 
 export function Hero({ onWatchDemo }: HeroProps) {
   const [mounted, setMounted] = useState(false);
+  const { t } = useI18n();
   useEffect(() => setMounted(true), []);
 
   return (
@@ -21,15 +23,13 @@ export function Hero({ onWatchDemo }: HeroProps) {
             <h1
               className={`font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl transition-all duration-700 ease-out ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
-              Save into{" "}
-              <span className="text-arka-primary">BTC Pockets</span>
+              {t("hero.title1")}
+              <span className="text-arka-primary">{t("hero.titleAccent")}</span>
             </h1>
             <p
               className={`mt-5 text-lg leading-relaxed text-gray-600 sm:text-xl transition-all duration-700 ease-out delay-150 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
-              Create savings goals and auto-invest into Bitcoin via Tokocrypto
-              virtual accounts. DCA your IDR into BTC for each goal—start with
-              as little as Rp 100.000.
+              {t("hero.subtitle")}
             </p>
             <div
               className={`mt-10 flex flex-wrap gap-4 transition-all duration-700 ease-out delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
@@ -38,19 +38,18 @@ export function Hero({ onWatchDemo }: HeroProps) {
                 href="#waitlist"
                 className="rounded-full bg-arka-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-arka-primary/25 transition-all hover:bg-arka-primary-dark hover:shadow-xl hover:shadow-arka-primary/30 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-arka-primary focus:ring-offset-2"
               >
-                Get early access
+                {t("hero.earlyAccess")}
               </a>
               <button
                 type="button"
                 onClick={onWatchDemo}
                 className="rounded-full border-2 border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-700 transition-all hover:border-arka-primary hover:bg-arka-surface hover:text-arka-primary-dark hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-arka-primary focus:ring-offset-2"
               >
-                Watch 30s demo
+                {t("hero.watchDemo")}
               </button>
             </div>
           </div>
 
-          {/* Phone with Chingari-style roll-in entrance + float */}
           <div className="relative">
             <PhoneMockup rollIn>
               {ARKA_DEMO_VIDEO ? (
@@ -67,7 +66,6 @@ export function Hero({ onWatchDemo }: HeroProps) {
               )}
             </PhoneMockup>
 
-            {/* Decorative glow orbs */}
             <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-arka-accent/20 blur-3xl animate-pulse-glow" />
             <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-arka-primary/15 blur-3xl animate-pulse-glow" style={{ animationDelay: "2s" }} />
           </div>
