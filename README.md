@@ -10,3 +10,10 @@ npm run dev
 ```
 
 Runs at [http://localhost:3000](http://localhost:3000).
+
+## Build
+
+```bash
+npm run build
+npm start
+```
