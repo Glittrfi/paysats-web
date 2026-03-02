@@ -17,3 +17,9 @@ Runs at [http://localhost:3000](http://localhost:3000).
 npm run build
 npm start
 ```
+
+## Lint
+
+```bash
+npm run lint
+```
