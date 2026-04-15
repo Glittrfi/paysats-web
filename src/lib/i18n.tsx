@@ -6,7 +6,7 @@ export type Locale = "id" | "en";
 
 const translations = {
   // Navbar
-  "nav.joinWaitlist": { id: "Gabung waitlist", en: "Join waitlist" },
+  "nav.joinWaitlist": { id: "Mulai nabung", en: "Start saving" },
 
   // Hero
   "hero.title1": { id: "Nabung di ", en: "Save into " },
@@ -15,14 +15,19 @@ const translations = {
     id: "Buat target tabungan dan investasi otomatis ke Bitcoin. DCA Rupiah ke BTC untuk setiap tujuan—mulai dari Rp 100.000.",
     en: "Create savings goals and auto-invest into Bitcoin. DCA your IDR into BTC for each goal—start with as little as Rp 100.000.",
   },
-  "hero.earlyAccess": { id: "Akses lebih awal", en: "Get early access" },
   "hero.howItWorks": { id: "Cara kerjanya", en: "How it works" },
 
-  // Social proof badges
-  "social.badge1": { id: "Nabung di BTC Pockets", en: "Save into BTC Pockets" },
-  "social.badge2": { id: "Auto DCA IDR → BTC", en: "Auto DCA IDR → BTC" },
-  "social.badge3": { id: "Aman & terverifikasi KYC", en: "Secure & KYC-verified" },
-  "social.badge4": { id: "Mulai dari Rp 100.000", en: "Start from Rp 100.000" },
+  // Social proof
+  "social.tagline": {
+    id: "Jangan sampai ketinggalan",
+    en: "Don\u0027t get left behind",
+  },
+  "social.stat1.value": { id: "100+", en: "100+" },
+  "social.stat1.label": { id: "Pengguna aktif", en: "Active Users" },
+  "social.stat2.value": { id: "Rp 10 Jt+", en: "Rp 10M+" },
+  "social.stat2.label": { id: "Dialihkan ke sats", en: "Routed to Sats" },
+  "social.stat3.value": { id: "3 Langkah", en: "3 Steps" },
+  "social.stat3.label": { id: "Mulai DCA ke BTC", en: "To Start DCA-ing" },
 
   // How it works
   "how.title": { id: "Cara kerja Arka", en: "How Arka works" },
@@ -68,7 +73,7 @@ const translations = {
     id: "Notifikasi instan setiap transaksi, biar kamu selalu tahu uangmu ke mana.",
     en: "Instant alerts for every transaction, so you always know what\u0027s happening with your money.",
   },
-  "card.cta": { id: "Dapatkan akses awal kartu", en: "Get early access to the card" },
+  "card.cta": { id: "Mulai nabung di Bitcoin", en: "Start saving in Bitcoin" },
 
   // Why Arka
   "whyArka.title": {
@@ -80,8 +85,8 @@ const translations = {
     en: "DCA your IDR into Bitcoin for every savings goal. Built for Indonesian savers who want a modern, app-first approach.",
   },
   "whyArka.earlyAccessBadge": {
-    id: "Akses awal terbatas",
-    en: "Limited Early Access",
+    id: "Mulai tabungan Bitcoin kamu",
+    en: "Start your Bitcoin savings",
   },
   "whyArka.carousel.cta": {
     id: "Buat BTC pocket untuk setiap tujuan hidup—mulai nabung sekarang.",
@@ -172,39 +177,6 @@ const translations = {
     id: "Data historis bersifat perkiraan. Kinerja masa lalu tidak menjamin hasil di masa depan.",
     en: "Historical data is approximate. Past performance does not guarantee future results.",
   },
-
-  // Waitlist section
-  "waitlist.title": { id: "Gabung waitlist", en: "Join the waitlist" },
-  "waitlist.subtitle": {
-    id: "Jadi yang pertama tahu saat Arka buka. Dapatkan akses prioritas ke BTC pocket, bantu bentuk produk dengan feedback awal, dan perks eksklusif saat peluncuran.",
-    en: "Be first to know when Arka opens. Get priority access to BTC pockets, influence the product with early feedback, and exclusive launch perks.",
-  },
-
-  // Waitlist form
-  "form.name": { id: "Nama", en: "Name" },
-  "form.optional": { id: "(opsional)", en: "(optional)" },
-  "form.namePlaceholder": { id: "Masukkan nama kamu", en: "Enter your name" },
-  "form.email": { id: "Email", en: "Email" },
-  "form.emailPlaceholder": { id: "Masukkan email kamu", en: "Enter your email" },
-  "form.phone": { id: "Telepon", en: "Phone" },
-  "form.savingFor": { id: "Kamu menabung untuk apa?", en: "What are you mainly saving for?" },
-  "form.selectOption": { id: "Pilih opsi", en: "Select an option" },
-  "form.iAm": { id: "Saya adalah…", en: "I am…" },
-  "form.userNew": { id: "Baru kenal neobank", en: "New to neobanks" },
-  "form.userExisting": { id: "Sudah pakai digital banking", en: "Already use digital banking" },
-  "form.userPower": { id: "Penabung aktif", en: "Power saver" },
-  "form.submit": { id: "Gabung Waitlist", en: "Join Waitlist" },
-
-  // Saving goals
-  "goal.emergency": { id: "Dana darurat (BTC)", en: "Emergency fund (BTC)" },
-  "goal.travel": { id: "Traveling", en: "Travel" },
-  "goal.housing": { id: "Sewa / Rumah", en: "Rent / Housing" },
-  "goal.gadgets": { id: "Gadget & teknologi", en: "Gadgets & tech" },
-  "goal.wedding": { id: "Pernikahan", en: "Wedding" },
-  "goal.education": { id: "Pendidikan", en: "Education" },
-  "goal.business": { id: "Bisnis / Side hustle", en: "Business / Side hustle" },
-  "goal.longterm": { id: "Tabungan BTC jangka panjang", en: "Long-term BTC savings" },
-  "goal.other": { id: "Lainnya", en: "Other" },
 
   // Footer
   "footer.privacy": { id: "Privasi", en: "Privacy" },

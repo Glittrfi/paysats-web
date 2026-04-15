@@ -70,7 +70,9 @@ export function BitcoinCard() {
             </AnimateIn>
             <AnimateIn animation="fade-up" delay={400}>
               <a
-                href="#waitlist"
+                href="https://app.arkabtc.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-10 inline-flex rounded-full bg-arka-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-arka-primary/25 transition-all hover:bg-arka-primary-dark hover:shadow-xl hover:shadow-arka-primary/30 focus:outline-none focus:ring-2 focus:ring-arka-primary focus:ring-offset-2"
               >
                 {t("card.cta")}

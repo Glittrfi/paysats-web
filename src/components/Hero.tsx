@@ -31,13 +31,11 @@ export function Hero() {
               className={`mt-10 flex flex-wrap gap-4 transition-all duration-700 ease-out delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
               <a
-                href="#waitlist"
+                href="https://app.arkabtc.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-arka-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-arka-primary/25 transition-all hover:bg-arka-primary-dark hover:shadow-xl hover:shadow-arka-primary/30 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-arka-primary focus:ring-offset-2"
               >
-                <span
-                  className="inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-white animate-heartbeat"
-                  aria-hidden
-                />
                 {t("whyArka.earlyAccessBadge")}
               </a>
               <a
