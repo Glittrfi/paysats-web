@@ -27,12 +27,12 @@ const goalKeys = [
 ] as const;
 
 const benefitKeys = [
-  { title: "whyArka.benefit1.title", desc: "whyArka.benefit1.desc", icon: "🔄", iconColor: "text-blue-500" },
-  { title: "whyArka.benefit2.title", desc: "whyArka.benefit2.desc", icon: "💳", iconColor: "text-pink-500" },
-  { title: "whyArka.benefit3.title", desc: "whyArka.benefit3.desc", icon: "💰", iconColor: "text-emerald-500" },
-  { title: "whyArka.benefit4.title", desc: "whyArka.benefit4.desc", icon: "🛡️", iconColor: "text-violet-500" },
-  { title: "whyArka.benefit5.title", desc: "whyArka.benefit5.desc", icon: "↔️", iconColor: "text-orange-500" },
-  { title: "whyArka.benefit6.title", desc: "whyArka.benefit6.desc", icon: "👁️", iconColor: "text-purple-500" },
+  { title: "whyArka.benefit1.title", desc: "whyArka.benefit1.desc", icon: "⚡", iconColor: "text-amber-500" },
+  { title: "whyArka.benefit2.title", desc: "whyArka.benefit2.desc", icon: "🔐", iconColor: "text-emerald-500" },
+  { title: "whyArka.benefit3.title", desc: "whyArka.benefit3.desc", icon: "💰", iconColor: "text-green-500" },
+  { title: "whyArka.benefit4.title", desc: "whyArka.benefit4.desc", icon: "📜", iconColor: "text-blue-500" },
+  { title: "whyArka.benefit5.title", desc: "whyArka.benefit5.desc", icon: "🪶", iconColor: "text-orange-500" },
+  { title: "whyArka.benefit6.title", desc: "whyArka.benefit6.desc", icon: "🌐", iconColor: "text-violet-500" },
 ] as const;
 
 function GoalCarousel() {

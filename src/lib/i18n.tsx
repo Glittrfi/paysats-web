@@ -12,8 +12,8 @@ const translations = {
   "hero.title1": { id: "Nabung di ", en: "Save into " },
   "hero.titleAccent": { id: "BTC Pockets", en: "BTC Pockets" },
   "hero.subtitle": {
-    id: "Buat target tabungan dan investasi otomatis ke Bitcoin. DCA Rupiah ke BTC untuk setiap tujuan—mulai dari Rp 100.000.",
-    en: "Create savings goals and auto-invest into Bitcoin. DCA your IDR into BTC for each goal—start with as little as Rp 100.000.",
+    id: "DCA satu klik ke Bitcoin, didukung smart contract. Sepenuhnya terdesentralisasi, non-custodial, biaya sangat kecil—mulai dari Rp 25.000.",
+    en: "One-click DCA into Bitcoin, powered by smart contracts. Fully decentralized, non-custodial, negligible fees—start from just Rp 25,000.",
   },
   "hero.howItWorks": { id: "Cara kerjanya", en: "How it works" },
 
@@ -26,29 +26,29 @@ const translations = {
   "social.stat1.label": { id: "Pengguna aktif", en: "Active Users" },
   "social.stat2.value": { id: "Rp 10 Jt+", en: "Rp 10M+" },
   "social.stat2.label": { id: "Dialihkan ke sats", en: "Routed to Sats" },
-  "social.stat3.value": { id: "3 Langkah", en: "3 Steps" },
-  "social.stat3.label": { id: "Mulai DCA ke BTC", en: "To Start DCA-ing" },
+  "social.stat3.value": { id: "Rp 25rb", en: "Rp 25K" },
+  "social.stat3.label": { id: "Minimum DCA", en: "Minimum DCA" },
 
   // How it works
   "how.title": { id: "Cara kerja Arka", en: "How Arka works" },
   "how.subtitle": {
-    id: "Dari daftar sampai DCA ke BTC dalam tiga langkah mudah—tanpa ke bank, tanpa ribet.",
-    en: "Get from signup to DCA-ing into BTC in three simple steps—no branch visits, no paperwork.",
+    id: "Dari daftar sampai DCA ke BTC dalam tiga langkah—didukung smart contract, tanpa perantara.",
+    en: "From sign-up to DCA-ing into BTC in three steps—powered by smart contracts, no middlemen.",
   },
-  "how.step1.title": { id: "Masuk dengan HP atau Google", en: "Continue with phone or Google" },
+  "how.step1.title": { id: "Daftar dengan akun sosial", en: "Sign up with your socials" },
   "how.step1.desc": {
-    id: "Daftar pakai nomor HP (OTP) atau Google. Verifikasi cepat—tanpa ke cabang bank.",
-    en: "Sign up with your phone number (OTP) or Google. Quick verification—no branch visits.",
+    id: "Smart wallet dibuat otomatis saat kamu masuk dengan Google, email, atau akun sosial. Tanpa seed phrase, tetap non-custodial.",
+    en: "A smart wallet is created automatically when you sign in with Google, email, or socials. No seed phrase, still non-custodial.",
   },
-  "how.step2.title": { id: "Buat BTC pocket kamu", en: "Create your BTC pockets" },
+  "how.step2.title": { id: "Buat BTC pocket & atur DCA", en: "Create a BTC pocket & set your DCA" },
   "how.step2.desc": {
-    id: "Siapkan akun Arka dan buat pocket untuk setiap tujuan. Beri nama, tentukan target, dan mulai nabung.",
-    en: "Set up your Arka account and create pockets for each goal. Name them, set targets, and start saving.",
+    id: "Buat pocket untuk setiap tujuan, pilih jumlah dan frekuensi. Smart contract mengeksekusi otomatis—mulai dari Rp 25.000.",
+    en: "Create a pocket for each goal, pick your amount and frequency. The smart contract executes automatically—starting from Rp 25,000.",
   },
-  "how.step3.title": { id: "Auto DCA & pantau pertumbuhan", en: "Auto DCA and track growth" },
+  "how.step3.title": { id: "Pantau pertumbuhan kamu", en: "Watch your savings grow" },
   "how.step3.desc": {
-    id: "Selesaikan KYC, lalu mulai investasi otomatis IDR ke BTC. Pantau tabungan kamu tumbuh di setiap pocket.",
-    en: "Complete KYC, get approved, and start auto-investing IDR into BTC. Watch your savings grow across every pocket.",
+    id: "DCA berjalan on-chain dengan biaya sangat kecil. Pantau setiap pocket tumbuh langsung di dashboard kamu.",
+    en: "Your DCA runs on-chain with negligible fees. Track every pocket growing right from your dashboard.",
   },
 
   // Bitcoin Card
@@ -81,8 +81,8 @@ const translations = {
     en: "More than just a regular crypto app",
   },
   "whyArka.subtitle": {
-    id: "DCA Rupiah ke Bitcoin untuk setiap target tabungan. Dibangun untuk penabung Indonesia yang ingin cara modern dan serba-aplikasi.",
-    en: "DCA your IDR into Bitcoin for every savings goal. Built for Indonesian savers who want a modern, app-first approach.",
+    id: "Didukung smart contract. Non-custodial. Biaya sangat kecil. Dibangun untuk penabung Indonesia yang menginginkan kedaulatan penuh atas aset mereka.",
+    en: "Powered by smart contracts. Non-custodial. Negligible fees. Built for Indonesian savers who want full sovereignty over their assets.",
   },
   "whyArka.earlyAccessBadge": {
     id: "Mulai tabungan Bitcoin kamu",
@@ -99,49 +99,52 @@ const translations = {
   "whyArka.goal3.title": { id: "Pensiun Tenang", en: "Peaceful Retirement" },
   "whyArka.goal3.label": { id: "Pensiun", en: "Retirement" },
   "whyArka.benefit1.title": {
-    id: "Auto DCA (Tabungan Rutin)",
-    en: "Auto DCA (Regular Savings)",
+    id: "DCA Satu Klik",
+    en: "One-Click DCA",
   },
   "whyArka.benefit1.desc": {
-    id: "Rata-rata harga beli Bitcoin secara otomatis. Kurangi risiko gejolak harga.",
-    en: "Automatically average Bitcoin purchase prices. Reduce the risk of price fluctuations.",
+    id: "Atur sekali, smart contract eksekusi otomatis. Rata-rata harga beli BTC tanpa repot.",
+    en: "Set it once, the smart contract executes automatically. Average into BTC without lifting a finger.",
   },
-  "whyArka.benefit2.title": { id: "Multi-pocket (Pocket)", en: "Multi-pocket (Pocket)" },
+  "whyArka.benefit2.title": {
+    id: "Non-Custodial",
+    en: "Non-Custodial",
+  },
   "whyArka.benefit2.desc": {
-    id: "Pisahkan tabungan Bitcoin untuk tujuan berbeda: dana pernikahan, dana rumah, atau dana pensiun.",
-    en: "Separate your Bitcoin savings for different purposes: wedding funds, house funds, or retirement funds.",
+    id: "Kunci privat tetap milik kamu. Tidak ada pihak ketiga yang memegang aset kamu—kedaulatan penuh.",
+    en: "Your keys, your coins. No third party holds your assets—full self-sovereignty.",
   },
   "whyArka.benefit3.title": {
-    id: "Mulai dari Rp 50.000",
-    en: "Starting from IDR 50,000",
+    id: "Mulai dari Rp 25.000",
+    en: "Starting from Rp 25,000",
   },
   "whyArka.benefit3.desc": {
-    id: "Tidak perlu modal besar. Denominasi kecil memudahkan siapa saja mulai menabung.",
-    en: "No need for large capital. Small denominations make it easy for anyone to start saving.",
+    id: "Tidak perlu modal besar. Mulai DCA ke Bitcoin dengan jumlah sekecil Rp 25.000 per pocket.",
+    en: "No large capital needed. Start DCA-ing into Bitcoin with as little as Rp 25,000 per pocket.",
   },
   "whyArka.benefit4.title": {
-    id: "Legal & Terdaftar",
-    en: "Legal & Regulated",
+    id: "Didukung Smart Contract",
+    en: "Powered by Smart Contracts",
   },
   "whyArka.benefit4.desc": {
-    id: "Arka terdaftar resmi di Bappebti. Aset dan dana pengguna dijamin aman.",
-    en: "Arka is officially registered with Bappebti. User assets and funds are guaranteed safe.",
+    id: "Setiap transaksi dieksekusi on-chain oleh smart contract. Transparan, tanpa perantara, dapat diverifikasi.",
+    en: "Every transaction is executed on-chain by smart contracts. Transparent, trustless, and verifiable.",
   },
   "whyArka.benefit5.title": {
-    id: "Tarik kapan saja",
-    en: "Withdraw Anytime",
+    id: "Biaya Sangat Kecil",
+    en: "Negligible Fees",
   },
   "whyArka.benefit5.desc": {
-    id: "Tidak ada periode mengunci. Aset sepenuhnya milik kamu, dan bisa cair ke rekening bank dalam hitungan menit.",
-    en: "There's no lock-up period. The assets are completely yours, and you can cash them into your bank account in minutes.",
+    id: "Biaya transaksi hampir nol. Lebih banyak Rupiah kamu masuk ke Bitcoin, bukan ke biaya.",
+    en: "Near-zero transaction fees. More of your Rupiah goes into Bitcoin, not into fees.",
   },
   "whyArka.benefit6.title": {
-    id: "100% Transparan",
-    en: "100% Transparent",
+    id: "Sepenuhnya Terdesentralisasi",
+    en: "Fully Decentralized",
   },
   "whyArka.benefit6.desc": {
-    id: "Tidak ada biaya tersembunyi. Spread dan biaya ditampilkan transparan sebelum transaksi.",
-    en: "No hidden fees. Spreads and fees are transparently displayed before a transaction.",
+    id: "Tidak ada server terpusat yang bisa disensor atau diretas. Protokol berjalan di blockchain—selalu aktif, selalu milik kamu.",
+    en: "No central server to censor or hack. The protocol runs on the blockchain—always on, always yours.",
   },
 
   // Why BTC
@@ -162,8 +165,8 @@ const translations = {
   },
   "whyBtc.point3.title": { id: "Mulai kecil.", en: "Start small." },
   "whyBtc.point3.desc": {
-    id: "Dengan Arka, kamu bisa DCA ke BTC mulai dari Rp 100.000 per pocket.",
-    en: "With Arka, you can DCA into BTC from as little as Rp 100.000 per pocket.",
+    id: "Dengan Arka, kamu bisa DCA ke BTC mulai dari Rp 25.000 per pocket.",
+    en: "With Arka, you can DCA into BTC from as little as Rp 25,000 per pocket.",
   },
   "whyBtc.calculatorTitle": {
     id: "Berapa yang bisa kamu dapat jika menabung di BTC?",
@@ -195,8 +198,8 @@ const translations = {
   // Metadata
   "meta.title": { id: "Arka – Nabung di BTC Pockets", en: "Arka – Save into BTC Pockets" },
   "meta.description": {
-    id: "Arka memungkinkan kamu DCA Rupiah ke Bitcoin untuk setiap target tabungan. Investasi otomatis. Mulai dari Rp 100.000. Dibangun untuk penabung Indonesia.",
-    en: "Arka lets you DCA your IDR into Bitcoin for every savings goal. Auto-invest with ease. Start from Rp 100.000. Built for Indonesian savers.",
+    id: "Arka: DCA satu klik ke Bitcoin via smart contract. Non-custodial, terdesentralisasi, biaya sangat kecil. Mulai dari Rp 25.000.",
+    en: "Arka: one-click DCA into Bitcoin via smart contracts. Non-custodial, fully decentralized, negligible fees. Start from Rp 25,000.",
   },
 } as const;
 
