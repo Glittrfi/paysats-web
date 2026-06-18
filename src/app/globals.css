@@ -149,7 +149,7 @@
   transform-style: preserve-3d;
 }
 
-/* IdrDcaCalculator theming (light, matches Arka) */
+/* IdrDcaCalculator theming (light, matches PaySats) */
 .idr-dca-calculator-wrapper {
   --border: 1px solid #e5e7eb;
   --text-primary: #111827;

@@ -33,10 +33,10 @@ export function VideoWithPlaceholder({
   return (
     <div className={`relative ${className}`}>
       {!ready && (
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-b from-arka-surface via-orange-50 to-white rounded-[inherit]">
-          <span className="text-2xl font-bold text-arka-primary font-display">Arka</span>
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-b from-paysats-surface via-orange-50 to-white rounded-[inherit]">
+          <span className="text-2xl font-bold text-paysats-primary font-display">PaySats</span>
           <div className="mt-3 h-1 w-16 overflow-hidden rounded-full bg-gray-200">
-            <div className="h-full w-full animate-shimmer rounded-full bg-gradient-to-r from-transparent via-arka-primary/40 to-transparent" />
+            <div className="h-full w-full animate-shimmer rounded-full bg-gradient-to-r from-transparent via-paysats-primary/40 to-transparent" />
           </div>
         </div>
       )}

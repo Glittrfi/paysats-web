@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        arka: {
+        paysats: {
           primary: "#F07E63",
           "primary-dark": "#E86548",
           secondary: "#6366F1",

@@ -26,8 +26,8 @@ export function HowItWorks() {
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {stepKeys.map((item, i) => (
             <AnimateIn key={item.step} animation="fade-up" delay={i * 150}>
-              <div className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:border-arka-primary/30 hover:shadow-lg hover:shadow-arka-primary/5 hover:-translate-y-1">
-                <span className="text-4xl font-bold text-arka-primary/30 font-display">
+              <div className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:border-paysats-primary/30 hover:shadow-lg hover:shadow-paysats-primary/5 hover:-translate-y-1">
+                <span className="text-4xl font-bold text-paysats-primary/30 font-display">
                   {item.step}
                 </span>
                 <h3 className="mt-4 font-display text-xl font-semibold text-gray-900">

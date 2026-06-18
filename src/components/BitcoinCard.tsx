@@ -14,20 +14,20 @@ export function BitcoinCard() {
           <AnimateIn animation="fade-left" className="order-2 lg:order-1">
             <div className="relative">
               <Image
-                src="/images/arka-bitcoin-card-hero.png"
-                alt="Arka Bitcoin Card with app screens showing BTC wallet, savings balance, and Bitcoin price chart"
+                src="/images/paysats-bitcoin-card-hero.png"
+                alt="PaySats Bitcoin Card with app screens showing BTC wallet, savings balance, and Bitcoin price chart"
                 width={1024}
                 height={576}
                 className="w-full rounded-xl animate-float-slow"
                 priority={false}
               />
-              <div className="absolute -bottom-6 -right-6 h-40 w-40 rounded-full bg-arka-primary/10 animate-pulse-glow blur-2xl" />
-              <div className="absolute -top-6 -left-6 h-32 w-32 rounded-full bg-arka-accent/15 animate-pulse-glow blur-2xl" style={{ animationDelay: "2s" }} />
+              <div className="absolute -bottom-6 -right-6 h-40 w-40 rounded-full bg-paysats-primary/10 animate-pulse-glow blur-2xl" />
+              <div className="absolute -top-6 -left-6 h-32 w-32 rounded-full bg-paysats-accent/15 animate-pulse-glow blur-2xl" style={{ animationDelay: "2s" }} />
             </div>
           </AnimateIn>
           <div className="order-1 lg:order-2">
             <AnimateIn animation="fade-up">
-              <span className="inline-block rounded-full bg-arka-primary/10 px-4 py-1.5 text-sm font-semibold text-arka-primary-dark">
+              <span className="inline-block rounded-full bg-paysats-primary/10 px-4 py-1.5 text-sm font-semibold text-paysats-primary-dark">
                 {t("card.soon")}
               </span>
               <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -40,7 +40,7 @@ export function BitcoinCard() {
             <AnimateIn animation="fade-up" delay={200}>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-arka-primary text-xs text-white font-bold">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-paysats-primary text-xs text-white font-bold">
                     ₿
                   </span>
                   <span className="text-gray-600">
@@ -49,7 +49,7 @@ export function BitcoinCard() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-arka-primary text-xs text-white font-bold">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-paysats-primary text-xs text-white font-bold">
                     ₿
                   </span>
                   <span className="text-gray-600">
@@ -58,7 +58,7 @@ export function BitcoinCard() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-arka-primary text-xs text-white font-bold">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-paysats-primary text-xs text-white font-bold">
                     ₿
                   </span>
                   <span className="text-gray-600">
@@ -70,10 +70,10 @@ export function BitcoinCard() {
             </AnimateIn>
             <AnimateIn animation="fade-up" delay={400}>
               <a
-                href="https://app.arkabtc.xyz"
+                href="https://app.paysats.exchange"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 inline-flex rounded-full bg-arka-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-arka-primary/25 transition-all hover:bg-arka-primary-dark hover:shadow-xl hover:shadow-arka-primary/30 focus:outline-none focus:ring-2 focus:ring-arka-primary focus:ring-offset-2"
+                className="mt-10 inline-flex rounded-full bg-paysats-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-paysats-primary/25 transition-all hover:bg-paysats-primary-dark hover:shadow-xl hover:shadow-paysats-primary/30 focus:outline-none focus:ring-2 focus:ring-paysats-primary focus:ring-offset-2"
               >
                 {t("card.cta")}
               </a>

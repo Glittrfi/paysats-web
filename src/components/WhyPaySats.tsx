@@ -7,32 +7,33 @@ import { AnimateIn } from "./AnimateIn";
 
 const goalKeys = [
   {
-    titleKey: "whyArka.goal1.title",
-    labelKey: "whyArka.goal1.label",
+    titleKey: "whyPaySats.goal1.title",
+    labelKey: "whyPaySats.goal1.label",
     src: "/images/goal-housing.png",
     alt: "Young Indonesian couple in front of their dream tropical home at golden hour",
   },
   {
-    titleKey: "whyArka.goal2.title",
-    labelKey: "whyArka.goal2.label",
+    titleKey: "whyPaySats.goal2.title",
+    labelKey: "whyPaySats.goal2.label",
     src: "/images/goal-wedding.png",
     alt: "Traditional Javanese wedding ceremony with flowers and golden lighting",
   },
   {
-    titleKey: "whyArka.goal3.title",
-    labelKey: "whyArka.goal3.label",
+    titleKey: "whyPaySats.goal3.title",
+    labelKey: "whyPaySats.goal3.label",
     src: "/images/goal-retirement.png",
     alt: "Retired Indonesian couple enjoying coffee overlooking Bali rice terraces at sunset",
   },
 ] as const;
 
 const benefitKeys = [
-  { title: "whyArka.benefit1.title", desc: "whyArka.benefit1.desc", icon: "⚡", iconColor: "text-amber-500" },
-  { title: "whyArka.benefit2.title", desc: "whyArka.benefit2.desc", icon: "🔐", iconColor: "text-emerald-500" },
-  { title: "whyArka.benefit3.title", desc: "whyArka.benefit3.desc", icon: "💰", iconColor: "text-green-500" },
-  { title: "whyArka.benefit4.title", desc: "whyArka.benefit4.desc", icon: "📜", iconColor: "text-blue-500" },
-  { title: "whyArka.benefit5.title", desc: "whyArka.benefit5.desc", icon: "🪶", iconColor: "text-orange-500" },
-  { title: "whyArka.benefit6.title", desc: "whyArka.benefit6.desc", icon: "🌐", iconColor: "text-violet-500" },
+  { title: "whyPaySats.benefit7.title", desc: "whyPaySats.benefit7.desc", icon: "🏦", iconColor: "text-rose-500", wide: true },
+  { title: "whyPaySats.benefit1.title", desc: "whyPaySats.benefit1.desc", icon: "⚡", iconColor: "text-amber-500" },
+  { title: "whyPaySats.benefit2.title", desc: "whyPaySats.benefit2.desc", icon: "🔐", iconColor: "text-emerald-500" },
+  { title: "whyPaySats.benefit3.title", desc: "whyPaySats.benefit3.desc", icon: "💰", iconColor: "text-green-500" },
+  { title: "whyPaySats.benefit4.title", desc: "whyPaySats.benefit4.desc", icon: "📜", iconColor: "text-blue-500" },
+  { title: "whyPaySats.benefit5.title", desc: "whyPaySats.benefit5.desc", icon: "🪶", iconColor: "text-orange-500" },
+  { title: "whyPaySats.benefit6.title", desc: "whyPaySats.benefit6.desc", icon: "🌐", iconColor: "text-violet-500" },
 ] as const;
 
 function GoalCarousel() {
@@ -84,7 +85,7 @@ function GoalCarousel() {
                   : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="inline-block rounded-full bg-arka-primary/90 px-4 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+              <span className="inline-block rounded-full bg-paysats-primary/90 px-4 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
                 {t(goal.labelKey)}
               </span>
               <h3 className="mt-3 font-display text-2xl font-bold text-white drop-shadow-lg sm:text-3xl">
@@ -108,7 +109,7 @@ function GoalCarousel() {
             <span className="absolute inset-0 rounded-full bg-gray-300" />
             {i === active && (
               <span
-                className="absolute inset-0 rounded-full bg-arka-primary"
+                className="absolute inset-0 rounded-full bg-paysats-primary"
                 style={{
                   animation: paused ? "none" : "progress 4s linear",
                 }}
@@ -132,54 +133,68 @@ function HeartbeatBadge() {
         className="inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-red-500 animate-heartbeat"
         aria-hidden
       />
-      {t("whyArka.earlyAccessBadge")}
+      {t("whyPaySats.earlyAccessBadge")}
     </span>
   );
 }
 
-export function WhyArka() {
+export function WhyPaySats() {
   const { t } = useI18n();
 
   return (
-    <section className="bg-gradient-to-b from-arka-surface/50 to-white py-20 sm:py-28">
+    <section className="bg-gradient-to-b from-paysats-surface/50 to-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimateIn animation="fade-up">
           <div className="mb-4">
             <HeartbeatBadge />
           </div>
           <h2 className="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {t("whyArka.title")}
+            {t("whyPaySats.title")}
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-gray-600">
-            {t("whyArka.subtitle")}
+            {t("whyPaySats.subtitle")}
           </p>
         </AnimateIn>
 
         <AnimateIn animation="scale" delay={200}>
           <GoalCarousel />
           <p className="mt-4 text-center text-sm text-gray-500">
-            {t("whyArka.carousel.cta")}
+            {t("whyPaySats.carousel.cta")}
           </p>
         </AnimateIn>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {benefitKeys.map((benefit, i) => (
-            <AnimateIn key={benefit.title} animation="fade-up" delay={i * 80}>
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-arka-primary/30 hover:shadow-lg hover:-translate-y-1">
-                <span
-                  className={`text-2xl sm:text-3xl ${benefit.iconColor ?? ""}`}
-                  role="img"
-                  aria-hidden
+          {benefitKeys.map((benefit, i) => {
+            const wide = "wide" in benefit && benefit.wide;
+            return (
+              <AnimateIn
+                key={benefit.title}
+                animation="fade-up"
+                delay={i * 80}
+                className={wide ? "sm:col-span-2" : ""}
+              >
+                <div
+                  className={`h-full rounded-2xl border p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 ${
+                    wide
+                      ? "border-paysats-primary/40 bg-paysats-surface/60 hover:border-paysats-primary/60"
+                      : "border-gray-200 bg-white hover:border-paysats-primary/30"
+                  }`}
                 >
-                  {benefit.icon}
-                </span>
-                <h3 className="mt-4 font-display text-lg font-semibold text-gray-900">
-                  {t(benefit.title)}
-                </h3>
-                <p className="mt-2 text-sm text-gray-600">{t(benefit.desc)}</p>
-              </div>
-            </AnimateIn>
-          ))}
+                  <span
+                    className={`text-2xl sm:text-3xl ${benefit.iconColor ?? ""}`}
+                    role="img"
+                    aria-hidden
+                  >
+                    {benefit.icon}
+                  </span>
+                  <h3 className="mt-4 font-display text-lg font-semibold text-gray-900">
+                    {t(benefit.title)}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600">{t(benefit.desc)}</p>
+                </div>
+              </AnimateIn>
+            );
+          })}
         </div>
       </div>
     </section>

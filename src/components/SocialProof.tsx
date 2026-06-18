@@ -13,7 +13,7 @@ export function SocialProof() {
   const { t } = useI18n();
 
   return (
-    <section className="border-y border-gray-100 bg-arka-surface/40 py-10 sm:py-12">
+    <section className="border-y border-gray-100 bg-paysats-surface/40 py-10 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-12">
           <AnimateIn animation="fade-up" duration={500}>
@@ -26,7 +26,7 @@ export function SocialProof() {
             {stats.map(({ valueKey, labelKey }, i) => (
               <AnimateIn key={valueKey} animation="fade-up" delay={100 + i * 120} duration={500}>
                 <div className="flex flex-col items-center px-8 sm:px-10">
-                  <span className="font-display text-3xl font-bold text-arka-primary sm:text-4xl">
+                  <span className="font-display text-3xl font-bold text-paysats-primary sm:text-4xl">
                     {t(valueKey)}
                   </span>
                   <span className="mt-1 text-sm font-medium text-gray-500">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { ARKA_DEMO_VIDEO } from "@/lib/constants";
+import { PAYSATS_DEMO_VIDEO } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
 
 interface VideoModalProps {
@@ -33,7 +33,7 @@ export function VideoModal({ isOpen, onClose }: VideoModalProps) {
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-      aria-label="Arka demo video"
+      aria-label="PaySats demo video"
     >
       <div
         className="absolute inset-0 bg-black/70 backdrop-blur-sm"
@@ -65,19 +65,19 @@ export function VideoModal({ isOpen, onClose }: VideoModalProps) {
           </svg>
         </button>
         <div className="overflow-hidden rounded-2xl bg-black shadow-2xl">
-          {ARKA_DEMO_VIDEO ? (
+          {PAYSATS_DEMO_VIDEO ? (
             <video
               className="aspect-video w-full"
               controls
               autoPlay
               playsInline
-              src={ARKA_DEMO_VIDEO}
+              src={PAYSATS_DEMO_VIDEO}
             >
               <track kind="captions" />
             </video>
           ) : (
             <div className="aspect-video w-full flex items-center justify-center bg-gray-900 text-gray-500">
-              <p>Add ARKA_DEMO_VIDEO in src/lib/constants.ts</p>
+              <p>Add PAYSATS_DEMO_VIDEO in src/lib/constants.ts</p>
             </div>
           )}
         </div>

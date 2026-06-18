@@ -27,7 +27,7 @@ export function BtcTicker() {
           change24h: json.bitcoin.idr_24h_change,
         });
       } catch {
-        /* silent — ticker is non-critical */
+        /* silent: ticker is non-critical */
       }
     }
 

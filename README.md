@@ -1,6 +1,6 @@
-# Arka
+# PaySats
 
-Landing page for Arka, a mobile neobank savings app for Indonesian and emerging-market users. DCA IDR to Bitcoin, multiple savings pockets, and waitlist signup.
+Landing page for PaySats, a mobile neobank savings app for Indonesian and emerging-market users. DCA IDR to Bitcoin, multiple savings pockets, and waitlist signup.
 
 ## Setup
 

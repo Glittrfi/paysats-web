@@ -13,9 +13,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Arka – Nabung di BTC Pockets",
+  title: "PaySats – Save in Bitcoin, Borrow in Rupiah",
   description:
-    "Arka memungkinkan kamu DCA Rupiah ke Bitcoin untuk setiap target tabungan. Investasi otomatis. Mulai dari Rp 100.000. Dibangun untuk penabung Indonesia.",
+    "PaySats: auto-DCA into Bitcoin, then borrow Rupiah straight to your bank or e-wallet against your BTC, without ever selling. Non-custodial, negligible fees, from Rp 25,000.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${dmSans.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${outfit.variable}`}>
       <body className="antialiased font-sans bg-white text-gray-900">
         {children}
       </body>
