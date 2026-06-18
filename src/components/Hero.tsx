@@ -1,6 +1,11 @@
 "use client";
 
-import { PAYSATS_DEMO_VIDEO } from "@/lib/constants";
+import {
+  APP_URL,
+  PAYSATS_DEMO_PLAYBACK_RATE,
+  PAYSATS_DEMO_VIDEO,
+  PAYSATS_DEMO_VIDEO_ASPECT,
+} from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
 import { useEffect, useState } from "react";
 import { PhoneMockup } from "./PhoneMockup";
@@ -31,7 +36,7 @@ export function Hero() {
               className={`mt-10 flex flex-wrap gap-4 transition-all duration-700 ease-out delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
               <a
-                href="https://app.paysats.exchange"
+                href={APP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-paysats-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-paysats-primary/25 transition-all hover:bg-paysats-primary-dark hover:shadow-xl hover:shadow-paysats-primary/30 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-paysats-primary focus:ring-offset-2"
@@ -52,10 +57,15 @@ export function Hero() {
               {PAYSATS_DEMO_VIDEO ? (
                 <VideoWithPlaceholder
                   src={PAYSATS_DEMO_VIDEO}
-                  className="aspect-[9/19.5] w-[170px] sm:w-[185px]"
+                  playbackRate={PAYSATS_DEMO_PLAYBACK_RATE}
+                  className="w-[170px] sm:w-[185px]"
+                  style={{ aspectRatio: PAYSATS_DEMO_VIDEO_ASPECT }}
                 />
               ) : (
-                <div className="aspect-[9/19.5] w-[170px] sm:w-[185px] bg-gradient-to-b from-orange-200/50 to-orange-100/30 flex items-center justify-center">
+                <div
+                  className="w-[170px] sm:w-[185px] bg-gradient-to-b from-orange-200/50 to-orange-100/30 flex items-center justify-center"
+                  style={{ aspectRatio: PAYSATS_DEMO_VIDEO_ASPECT }}
+                >
                   <p className="text-center text-sm text-orange-700 px-4">
                     Add your demo video in <code className="text-xs">src/lib/constants.ts</code>
                   </p>

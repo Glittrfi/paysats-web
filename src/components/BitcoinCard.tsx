@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { APP_URL } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
 import { AnimateIn } from "./AnimateIn";
 
@@ -70,7 +71,7 @@ export function BitcoinCard() {
             </AnimateIn>
             <AnimateIn animation="fade-up" delay={400}>
               <a
-                href="https://app.paysats.exchange"
+                href={APP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-10 inline-flex rounded-full bg-paysats-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-paysats-primary/25 transition-all hover:bg-paysats-primary-dark hover:shadow-xl hover:shadow-paysats-primary/30 focus:outline-none focus:ring-2 focus:ring-paysats-primary focus:ring-offset-2"

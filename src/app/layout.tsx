@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Outfit } from "next/font/google";
+import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -13,9 +14,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "PaySats – Save in Bitcoin, Borrow in Rupiah",
   description:
     "PaySats: auto-DCA into Bitcoin, then borrow Rupiah straight to your bank or e-wallet against your BTC, without ever selling. Non-custodial, negligible fees, from Rp 25,000.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

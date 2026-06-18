@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { APP_URL } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
 import { BtcTicker } from "./BtcTicker";
 
@@ -34,7 +35,7 @@ export function Navbar() {
             {locale === "id" ? "EN" : "ID"}
           </button>
           <a
-            href="https://app.paysats.exchange"
+            href={APP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-paysats-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-paysats-primary/25 transition-all hover:bg-paysats-primary-dark hover:shadow-xl hover:shadow-paysats-primary/30 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-paysats-primary focus:ring-offset-2"
