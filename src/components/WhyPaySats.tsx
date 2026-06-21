@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { AnimateIn } from "./AnimateIn";
+import { Icon, type IconName } from "./icons";
 
 const goalKeys = [
   {
@@ -27,14 +28,19 @@ const goalKeys = [
 ] as const;
 
 const benefitKeys = [
-  { title: "whyPaySats.benefit7.title", desc: "whyPaySats.benefit7.desc", icon: "🏦", iconColor: "text-rose-500", wide: true },
-  { title: "whyPaySats.benefit1.title", desc: "whyPaySats.benefit1.desc", icon: "⚡", iconColor: "text-amber-500" },
-  { title: "whyPaySats.benefit2.title", desc: "whyPaySats.benefit2.desc", icon: "🔐", iconColor: "text-emerald-500" },
-  { title: "whyPaySats.benefit3.title", desc: "whyPaySats.benefit3.desc", icon: "💰", iconColor: "text-green-500" },
-  { title: "whyPaySats.benefit4.title", desc: "whyPaySats.benefit4.desc", icon: "📜", iconColor: "text-blue-500" },
-  { title: "whyPaySats.benefit5.title", desc: "whyPaySats.benefit5.desc", icon: "🪶", iconColor: "text-orange-500" },
-  { title: "whyPaySats.benefit6.title", desc: "whyPaySats.benefit6.desc", icon: "🌐", iconColor: "text-violet-500" },
-] as const;
+  { title: "whyPaySats.benefit7.title", desc: "whyPaySats.benefit7.desc", icon: "landmark", wide: true },
+  { title: "whyPaySats.benefit1.title", desc: "whyPaySats.benefit1.desc", icon: "zap" },
+  { title: "whyPaySats.benefit2.title", desc: "whyPaySats.benefit2.desc", icon: "shield-check" },
+  { title: "whyPaySats.benefit3.title", desc: "whyPaySats.benefit3.desc", icon: "coins" },
+  { title: "whyPaySats.benefit4.title", desc: "whyPaySats.benefit4.desc", icon: "file-code" },
+  { title: "whyPaySats.benefit5.title", desc: "whyPaySats.benefit5.desc", icon: "feather" },
+  { title: "whyPaySats.benefit6.title", desc: "whyPaySats.benefit6.desc", icon: "globe" },
+] as const satisfies readonly {
+  title: string;
+  desc: string;
+  icon: IconName;
+  wide?: boolean;
+}[];
 
 function GoalCarousel() {
   const [active, setActive] = useState(0);
@@ -174,18 +180,20 @@ export function WhyPaySats() {
                 className={wide ? "sm:col-span-2" : ""}
               >
                 <div
-                  className={`h-full rounded-2xl border p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 ${
+                  className={`group h-full rounded-2xl border p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 ${
                     wide
                       ? "border-paysats-primary/40 bg-paysats-surface/60 hover:border-paysats-primary/60"
                       : "border-gray-200 bg-white hover:border-paysats-primary/30"
                   }`}
                 >
                   <span
-                    className={`text-2xl sm:text-3xl ${benefit.iconColor ?? ""}`}
-                    role="img"
-                    aria-hidden
+                    className={`inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors ${
+                      wide
+                        ? "bg-paysats-primary text-white shadow-sm shadow-paysats-primary/30"
+                        : "bg-paysats-surface text-paysats-primary ring-1 ring-paysats-primary/10 group-hover:bg-paysats-primary group-hover:text-white"
+                    }`}
                   >
-                    {benefit.icon}
+                    <Icon name={benefit.icon} className="h-5 w-5" />
                   </span>
                   <h3 className="mt-4 font-display text-lg font-semibold text-gray-900">
                     {t(benefit.title)}

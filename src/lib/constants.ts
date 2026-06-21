@@ -4,6 +4,9 @@ export const SITE_URL = "https://paysats.exchange";
 /** PaySats web app */
 export const APP_URL = "https://app.paysats.exchange";
 
+/** Public contact email */
+export const CONTACT_EMAIL = "hello@paysats.exchange";
+
 /** PaySats product demo video (Hero + modal), black bar cropped (720×1420) */
 export const PAYSATS_DEMO_VIDEO = "/videos/web_demo_paysats_cropped.mp4";
 

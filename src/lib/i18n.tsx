@@ -10,10 +10,10 @@ const translations = {
 
   // Hero
   "hero.title1": { id: "Nabung Bitcoin, ", en: "Save in Bitcoin, " },
-  "hero.titleAccent": { id: "pinjam Rupiah", en: "borrow Rupiah" },
+  "hero.titleVerb": { id: "pinjam ", en: "borrow " },
   "hero.subtitle": {
-    id: "DCA otomatis ke Bitcoin, lalu pinjam Rupiah langsung ke rekening bank atau e-wallet dengan jaminan BTC kamu, tanpa pernah menjual. Non-custodial, didukung smart contract, mulai dari Rp 25.000.",
-    en: "Auto-DCA into Bitcoin, then borrow Rupiah straight to your bank account or e-wallet against your BTC, without ever selling. Non-custodial, smart-contract powered, from just Rp 25,000.",
+    id: "DCA otomatis ke Bitcoin, lalu pinjam Rupiah langsung ke rekening bank atau e-wallet dengan jaminan BTC kamu, tanpa pernah menjual. Kustodi mandiri, didukung DeFi, mulai dari Rp 25.000.",
+    en: "Auto-DCA into Bitcoin, then borrow Rupiah straight to your bank account or e-wallet against your BTC, without ever selling. Self-custody, DeFi-powered, from just Rp 25,000.",
   },
   "hero.howItWorks": { id: "Cara kerjanya", en: "How it works" },
 
@@ -37,8 +37,8 @@ const translations = {
   },
   "how.step1.title": { id: "Daftar dengan akun sosial", en: "Sign up with your socials" },
   "how.step1.desc": {
-    id: "Smart wallet dibuat otomatis saat kamu masuk dengan Google, email, atau akun sosial. Tanpa seed phrase, tetap non-custodial.",
-    en: "A smart wallet is created automatically when you sign in with Google, email, or socials. No seed phrase, still non-custodial.",
+    id: "Smart wallet dibuat otomatis saat kamu masuk dengan Google, email, atau akun sosial. Tanpa seed phrase, tetap kustodi mandiri.",
+    en: "A smart wallet is created automatically when you sign in with Google, email, or socials. No seed phrase, still self-custody.",
   },
   "how.step2.title": { id: "Buat BTC pocket & atur DCA", en: "Create a BTC pocket & set your DCA" },
   "how.step2.desc": {
@@ -81,8 +81,8 @@ const translations = {
     en: "More than just a regular crypto app",
   },
   "whyPaySats.subtitle": {
-    id: "Nabung di Bitcoin, lalu pinjam Rupiah dengan jaminan BTC tanpa pernah menjualnya. Non-custodial, didukung smart contract, biaya sangat kecil, dibangun untuk penabung Indonesia yang menginginkan kedaulatan penuh atas aset mereka.",
-    en: "Save in Bitcoin, then borrow Rupiah against it without ever selling. Non-custodial, smart-contract powered, with negligible fees, built for Indonesian savers who want full sovereignty over their assets.",
+    id: "Nabung di Bitcoin, lalu pinjam Rupiah dengan jaminan BTC tanpa pernah menjualnya. Kustodi mandiri, didukung DeFi, biaya sangat kecil, dibangun untuk penabung Indonesia yang menginginkan kedaulatan penuh atas aset mereka.",
+    en: "Save in Bitcoin, then borrow Rupiah against it without ever selling. Self-custody, DeFi-powered, with negligible fees, built for Indonesian savers who want full sovereignty over their assets.",
   },
   "whyPaySats.earlyAccessBadge": {
     id: "Mulai tabungan Bitcoin kamu",
@@ -107,8 +107,8 @@ const translations = {
     en: "Set it once, the smart contract executes automatically. Average into BTC without lifting a finger.",
   },
   "whyPaySats.benefit2.title": {
-    id: "Non-Custodial",
-    en: "Non-Custodial",
+    id: "Kustodi Mandiri",
+    en: "Self-Custody",
   },
   "whyPaySats.benefit2.desc": {
     id: "Kunci privat tetap milik kamu. Tidak ada pihak ketiga yang memegang aset kamu, kedaulatan penuh.",
@@ -206,8 +206,8 @@ const translations = {
   // Metadata
   "meta.title": { id: "PaySats – Nabung Bitcoin, Pinjam Rupiah", en: "PaySats – Save in Bitcoin, Borrow in Rupiah" },
   "meta.description": {
-    id: "PaySats: DCA otomatis ke Bitcoin, lalu pinjam Rupiah langsung ke rekening bank atau e-wallet dengan jaminan BTC, tanpa pernah menjual. Non-custodial, biaya sangat kecil, mulai dari Rp 25.000.",
-    en: "PaySats: auto-DCA into Bitcoin, then borrow Rupiah straight to your bank or e-wallet against your BTC, without ever selling. Non-custodial, negligible fees, from Rp 25,000.",
+    id: "PaySats: DCA otomatis ke Bitcoin, lalu pinjam Rupiah langsung ke rekening bank atau e-wallet dengan jaminan BTC, tanpa pernah menjual. Kustodi mandiri, biaya sangat kecil, mulai dari Rp 25.000.",
+    en: "PaySats: auto-DCA into Bitcoin, then borrow Rupiah straight to your bank or e-wallet against your BTC, without ever selling. Self-custody, negligible fees, from Rp 25,000.",
   },
 } as const;
 

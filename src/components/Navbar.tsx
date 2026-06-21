@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { APP_URL } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
 import { BtcTicker } from "./BtcTicker";
@@ -12,7 +13,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
-          <a href="#" className="flex items-center gap-2 font-display text-xl font-bold text-gray-900">
+          <Link href="/" className="flex items-center gap-2 font-display text-xl font-bold text-gray-900">
             <Image
               src="/images/logo.svg"
               alt="PaySats logo"
@@ -22,7 +23,7 @@ export function Navbar() {
               priority
             />
             PaySats
-          </a>
+          </Link>
           <BtcTicker />
         </div>
         <div className="flex items-center gap-3">

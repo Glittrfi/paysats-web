@@ -1,16 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { CONTACT_EMAIL } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n";
 
 export function Footer() {
   const { t } = useI18n();
 
   const links = [
-    { href: "#", label: t("footer.privacy") },
-    { href: "#", label: t("footer.terms") },
+    { href: "/privacy", label: t("footer.privacy") },
+    { href: "/terms", label: t("footer.terms") },
     { href: "https://x.com/paysats_", label: "X / Twitter", external: true },
-    { href: "mailto:hello@arka.app", label: "Email", external: true },
+    { href: `mailto:${CONTACT_EMAIL}`, label: "Email", external: true },
   ];
 
   return (
@@ -28,17 +30,27 @@ export function Footer() {
             PaySats
           </span>
           <nav className="flex flex-wrap justify-center gap-6">
-            {links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                className="text-sm text-gray-600 hover:text-paysats-primary transition"
-              >
-                {link.label}
-              </a>
-            ))}
+            {links.map((link) =>
+              link.external ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-600 hover:text-paysats-primary transition"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm text-gray-600 hover:text-paysats-primary transition"
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
           </nav>
         </div>
         <p className="mt-8 text-center text-xs text-gray-500">

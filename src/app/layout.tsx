@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "PaySats – Save in Bitcoin, Borrow in Rupiah",
   description:
-    "PaySats: auto-DCA into Bitcoin, then borrow Rupiah straight to your bank or e-wallet against your BTC, without ever selling. Non-custodial, negligible fees, from Rp 25,000.",
+    "PaySats: auto-DCA into Bitcoin, then borrow Rupiah straight to your bank or e-wallet against your BTC, without ever selling. Self-custody, negligible fees, from Rp 25,000.",
   alternates: {
     canonical: "/",
   },
